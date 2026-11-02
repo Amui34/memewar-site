@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rejoindre une partie — MemeWar</title>
+<meta name="description" content="Rejoins la partie MemeWar de tes amis.">
+<meta property="og:title" content="Rejoindre une partie — MemeWar">
+<meta property="og:description" content="Rejoins la partie MemeWar de tes amis.">
+<meta property="og:image" content="img/icon.png">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./"><img src="img/icon.png" alt="" width="44" height="44"><span>MemeWar</span></a>
+  <nav><a href="./#jouer">Comment jouer</a><a href="assistance.html">Assistance</a></nav>
+</header>
+<main class="doc join">
+  <img class="mascot small" src="img/gerard.png" alt="" width="140" height="140">
+  <h1>On t’attend !</h1>
+  <p class="lead">Code de la partie</p>
+  <p class="code" id="code">····</p>
+  <a class="btn" id="open" href="memewar://rejoindre">Ouvrir MemeWar</a>
+  <section class="card"><h2>Pas encore l’appli ?</h2><p>Installe MemeWar, ouvre-la, puis touche <strong>Jouer</strong> et tape le code ci-dessus. Bientôt sur l’App Store.</p></section>
+  <script>
+    const code = (new URLSearchParams(location.search).get('code') || '').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 4);
+    if (code) {
+      document.getElementById('code').textContent = code;
+      document.getElementById('open').href = 'memewar://rejoindre?code=' + code;
+    }
+  </script>
+</main>
+<footer>
+  <p>MemeWar · © 2026 Noa Madar. Tous droits réservés.</p>
+  <p><a href="confidentialite.html">Confidentialité</a> · <a href="assistance.html">Assistance</a></p>
+  <p class="small">Les images de mèmes appartiennent à leurs auteurs et ayants droit respectifs.</p>
+</footer>
+</body>
+</html>
