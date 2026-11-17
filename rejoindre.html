@@ -26,7 +26,7 @@
   <p class="lead">Code de la partie</p>
   <p class="code" id="code">····</p>
   <a class="btn" id="open" href="memewar://rejoindre">Ouvrir MemeWar</a>
-  <section class="card"><h2>Pas encore l’appli ?</h2><p>Installe MemeWar, ouvre-la, puis touche <strong>Jouer</strong> et tape le code ci-dessus. Bientôt sur l’App Store.</p></section>
+  <section class="card"><h2>Pas encore l’appli ?</h2><p>Installe MemeWar, ouvre-la, puis touche <strong>Jouer</strong> et tape le code ci-dessus. <a href="https://apps.apple.com/fr/app/memewar/id6827291937">Télécharger sur l’App Store</a></p></section>
   <script>
     const code = (new URLSearchParams(location.search).get('code') || '').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 4);
     if (code) {
@@ -36,7 +36,8 @@
   </script>
 </main>
 <footer>
-  <p>MemeWar · © 2026 Noa Madar. Tous droits réservés.</p>
+  <p>MemeWar · © 2026 SAS NOMAD. Tous droits réservés.</p>
+  <p class="small">Conçu et développé par Noa Madar</p>
   <p><a href="confidentialite.html">Confidentialité</a> · <a href="assistance.html">Assistance</a></p>
   <p class="small">Les images de mèmes appartiennent à leurs auteurs et ayants droit respectifs.</p>
 </footer>
